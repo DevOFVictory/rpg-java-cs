@@ -10,6 +10,8 @@ public class RPGGame {
 
         System.out.println("Game has stated.");
 
+        // Test
+
     }
 
     public void setGameField(GamePlan gamePlan) {
