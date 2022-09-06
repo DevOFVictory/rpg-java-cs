@@ -7,7 +7,6 @@ public class Action extends GameObject {
     private Runnable executableAction;
 
     public void fight() {
-        Player p = new Player();
 
     }
 
