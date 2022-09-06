@@ -22,4 +22,8 @@ public class Player extends LivingEntity {
     public void damage(int amount){
         hp -= amount;
     }
+
+    public void move(int amount) {
+
+    }
 }
