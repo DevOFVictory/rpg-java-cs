@@ -9,7 +9,17 @@ import lombok.EqualsAndHashCode;
 public class Player extends LivingEntity {
     private int talent;
     private int hp;
+    private int gold;
 
     private PlayerInventory inventory;
     private Role role;
+
+    public Player(String name) {
+        this.setName(name);
+    }
+
+
+    public void damage(int amount){
+        hp -= amount;
+    }
 }

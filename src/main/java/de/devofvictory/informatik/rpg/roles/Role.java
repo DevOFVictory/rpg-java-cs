@@ -6,7 +6,11 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum Role {
 
-    THIEF("Dieb", 100, 10), MAGIER("Magier", 100, 10), FETTI("Irgendwas tankiges", 1000, 100);
+    THIEF("Dieb", 100, 10),
+    MAGE("Magier", 100, 10),
+    FETTI("Irgendwas tankiges", 400, 5),
+    ARCHER("Bogenschütze",1000,10),
+    WARRIOR("Krieger",200,20);
 
     @Getter
     private final String name;

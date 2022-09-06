@@ -9,11 +9,14 @@ import java.util.List;
 
 public class FightUtils {
 
-    public static LivingEntity fight(List<LivingEntity> entities) {
-
-        entities.sort((e1, e2) -> getEntityStrength(e1) - getEntityStrength(e2));
-        return entities.get(0);
-
+    public static LivingEntity fight(LivingEntity a, LivingEntity b) {
+        if (getEntityStrength(a) > getEntityStrength(b)) {
+            return a;
+        } else if(getEntityStrength(a) < getEntityStrength(b)) {
+            return b;
+        } else {
+            return null;
+        }
     }
 
     public static int getEntityStrength(LivingEntity entity) {
