@@ -15,6 +15,8 @@ public class RPGGame {
         p.damage(10);
         System.out.println(p.getHp());
 
+        // Test
+
     }
 
     public void setGameField(GamePlan gamePlan) {
