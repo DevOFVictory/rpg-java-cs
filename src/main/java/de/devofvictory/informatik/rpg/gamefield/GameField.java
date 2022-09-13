@@ -17,4 +17,5 @@ public class GameField {
         return gamePlan.getGameFields().keySet().stream().findFirst().get();
     }
 
+
 }

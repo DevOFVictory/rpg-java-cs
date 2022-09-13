@@ -8,5 +8,10 @@ import java.util.UUID;
 public class GameObject {
     private String name;
     private UUID id;
+    private RPGGame game;
+
+    public GameObject() {
+        this.game = InformatikRPG.getGame();
+    }
 
 }

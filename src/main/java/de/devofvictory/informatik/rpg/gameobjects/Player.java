@@ -1,5 +1,7 @@
 package de.devofvictory.informatik.rpg.gameobjects;
 
+import de.devofvictory.informatik.rpg.RPGGame;
+import de.devofvictory.informatik.rpg.gamefield.GameField;
 import de.devofvictory.informatik.rpg.roles.Role;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -14,7 +16,9 @@ public class Player extends LivingEntity {
     private PlayerInventory inventory;
     private Role role;
 
+
     public Player(String name) {
+        super();
         this.setName(name);
     }
 
@@ -24,6 +28,10 @@ public class Player extends LivingEntity {
     }
 
     public void move(int amount) {
+        getGame().getGamePlan().movePlayer(this, getGame().getGamePlan().findPlayer(this).getFieldNumber()+amount);
+    }
 
+    public GameField getField() {
+        return getGame().getGamePlan().findPlayer(this);
     }
 }
